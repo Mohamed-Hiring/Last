@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { Card, CardContent } from "../components/ui/card";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
+import Input from "../components/ui/input";
+import Label from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
-import { Button } from "../components/ui/button";
+import Button from "../components/ui/button";
 
 export default function HiringCardForm() {
   const [hours, setHours] = useState(0);
@@ -16,7 +16,6 @@ export default function HiringCardForm() {
 
   return (
     <div className="max-w-2xl mx-auto p-4">
-      {/* Logo */}
       <div className="flex justify-center mb-4">
         <Image
           src="/logo_1-removebg-preview.png"
@@ -26,12 +25,10 @@ export default function HiringCardForm() {
         />
       </div>
 
-      {/* Title */}
       <h1 className="text-2xl font-bold mb-4 text-center text-purple-800">
         Al Haidariya Heavy Equipment Hiring
       </h1>
 
-      {/* Card */}
       <Card className="shadow-xl">
         <CardContent className="grid gap-4 p-4">
           
