@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { Card, CardContent } from "../components/ui/card";
-import Input from "../components/ui/input";
-import Label from "../components/ui/label";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
-import Button from "../components/ui/button";
+import { Button } from "../components/ui/button";
 
 export default function HiringCardForm() {
   const [hours, setHours] = useState(0);
@@ -88,11 +88,4 @@ export default function HiringCardForm() {
           <div>
             <Label>Notes</Label>
             <Textarea placeholder="Any special instructions or notes..." />
-          </div>
-
-          <Button className="mt-4">Submit Hiring Card</Button>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
+          </
