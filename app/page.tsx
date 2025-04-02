@@ -14,8 +14,8 @@ export default function HiringCardForm() {
   const total = (hours * rate).toFixed(2);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-      <div className="w-full max-w-2xl">
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-white flex items-center justify-center p-6">
+      <div className="w-full max-w-3xl bg-white rounded-3xl shadow-2xl p-8 border border-purple-200">
         <div className="flex justify-center mb-6">
           <Image
             src="/logo_1-removebg-preview.png"
@@ -25,72 +25,70 @@ export default function HiringCardForm() {
           />
         </div>
 
-        <h1 className="text-3xl font-extrabold text-center text-purple-700 mb-6">
-          Al Haidariya Heavy Equipment Hiring
+        <h1 className="text-4xl font-bold text-center text-purple-800 mb-8">
+          Al Haidariya Equipment Hiring Form
         </h1>
 
-        <Card className="shadow-2xl rounded-2xl border border-purple-200">
-          <div className="grid gap-6 p-6">
-            <div>
-              <Label className="text-sm font-medium text-gray-700">Customer Name</Label>
-              <Input placeholder="Enter customer name" />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="col-span-full">
+            <Label>Customer Name</Label>
+            <Input placeholder="Enter customer name" />
+          </div>
 
-            <div>
-              <Label className="text-sm font-medium text-gray-700">Machinery Name</Label>
-              <Input placeholder="e.g. Excavator 30 Ton With Breaker" />
-            </div>
+          <div className="col-span-full">
+            <Label>Machinery Name</Label>
+            <Input placeholder="e.g. Excavator 30 Ton With Breaker" />
+          </div>
 
-            <div>
-              <Label className="text-sm font-medium text-gray-700">Location</Label>
-              <Input placeholder="Enter worksite location" />
-            </div>
+          <div className="col-span-full">
+            <Label>Location</Label>
+            <Input placeholder="Enter worksite location" />
+          </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label className="text-sm font-medium text-gray-700">Start Date</Label>
-                <Input type="date" />
-              </div>
-              <div>
-                <Label className="text-sm font-medium text-gray-700">Return Date</Label>
-                <Input type="date" />
-              </div>
-            </div>
+          <div>
+            <Label>Start Date</Label>
+            <Input type="date" />
+          </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label className="text-sm font-medium text-gray-700">Total Hours</Label>
-                <Input
-                  type="number"
-                  value={hours}
-                  onChange={(e) => setHours(parseFloat(e.target.value))}
-                />
-              </div>
-              <div>
-                <Label className="text-sm font-medium text-gray-700">Rate per 8 Hours</Label>
-                <Input
-                  type="number"
-                  value={rate}
-                  onChange={(e) => setRate(parseFloat(e.target.value))}
-                />
-              </div>
-            </div>
+          <div>
+            <Label>Return Date</Label>
+            <Input type="date" />
+          </div>
 
-            <div>
-              <Label className="text-sm font-medium text-gray-700">Calculated Amount</Label>
-              <Input value={`BHD ${total}`} readOnly className="bg-gray-100" />
-            </div>
+          <div>
+            <Label>Total Hours</Label>
+            <Input
+              type="number"
+              value={hours}
+              onChange={(e) => setHours(parseFloat(e.target.value))}
+            />
+          </div>
 
-            <div>
-              <Label className="text-sm font-medium text-gray-700">Notes</Label>
-              <Textarea placeholder="Any special instructions or notes..." />
-            </div>
+          <div>
+            <Label>Rate per 8 Hours</Label>
+            <Input
+              type="number"
+              value={rate}
+              onChange={(e) => setRate(parseFloat(e.target.value))}
+            />
+          </div>
 
-            <Button className="bg-purple-700 text-white hover:bg-purple-800 transition mt-2">
+          <div className="col-span-full">
+            <Label>Calculated Amount</Label>
+            <Input value={`BHD ${total}`} readOnly className="bg-gray-100" />
+          </div>
+
+          <div className="col-span-full">
+            <Label>Notes</Label>
+            <Textarea placeholder="Any special instructions or notes..." />
+          </div>
+
+          <div className="col-span-full">
+            <Button className="w-full bg-purple-700 text-white hover:bg-purple-800 transition rounded-xl py-3 text-lg">
               Submit Hiring Card
             </Button>
           </div>
-        </Card>
+        </div>
       </div>
     </div>
   );
