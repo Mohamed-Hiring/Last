@@ -88,4 +88,11 @@ export default function HiringCardForm() {
           <div>
             <Label>Notes</Label>
             <Textarea placeholder="Any special instructions or notes..." />
-          </
+          </div>
+
+          <Button className="mt-4">Submit Hiring Card</Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
