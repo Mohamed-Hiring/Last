@@ -3,24 +3,20 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// Ensure the paths to your components are correct
 import { Card, CardContent } from "../components/ui/card";
 import Input from "../components/ui/input";
 import Label from "../components/ui/label";
-import Textarea from "../components/ui/textarea";
+import { Textarea } from "../components/ui/textarea";
 import Button from "../components/ui/button";
 
 export default function HiringCardForm() {
-  // State for tracking hours and rate
   const [hours, setHours] = useState(0);
   const [rate, setRate] = useState(0);
-  
-  // Calculate the total
   const total = (hours * rate).toFixed(2);
 
   return (
     <div className="max-w-2xl mx-auto p-4">
-      {/* Add logo */}
+      {/* Logo */}
       <div className="flex justify-center mb-4">
         <Image
           src="/logo_1-removebg-preview.png"
@@ -35,11 +31,10 @@ export default function HiringCardForm() {
         Al Haidariya Heavy Equipment Hiring
       </h1>
 
-      {/* Card containing the form */}
+      {/* Card */}
       <Card className="shadow-xl">
         <CardContent className="grid gap-4 p-4">
           
-          {/* Input fields */}
           <div>
             <Label>Customer Name</Label>
             <Input placeholder="Enter customer name" />
@@ -55,7 +50,6 @@ export default function HiringCardForm() {
             <Input placeholder="Enter worksite location" />
           </div>
 
-          {/* Date fields */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label>Start Date</Label>
@@ -67,7 +61,6 @@ export default function HiringCardForm() {
             </div>
           </div>
 
-          {/* Hours and rate */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label>Total Hours</Label>
@@ -87,19 +80,16 @@ export default function HiringCardForm() {
             </div>
           </div>
 
-          {/* Calculated amount */}
           <div>
             <Label>Calculated Amount</Label>
             <Input value={`BHD ${total}`} readOnly />
           </div>
 
-          {/* Notes */}
           <div>
             <Label>Notes</Label>
             <Textarea placeholder="Any special instructions or notes..." />
           </div>
 
-          {/* Submit button */}
           <Button className="mt-4">Submit Hiring Card</Button>
         </CardContent>
       </Card>
