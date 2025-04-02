@@ -32,32 +32,32 @@ export default function HiringCardForm() {
         <Card className="shadow-lg border border-gray-200 rounded-2xl">
           <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
             <div className="md:col-span-2">
-              <Label className="text-base font-semibold text-gray-700">Customer Name</Label>
+              <Label>Customer Name</Label>
               <Input placeholder="Enter customer's full name" />
             </div>
 
             <div className="md:col-span-2">
-              <Label className="text-base font-semibold text-gray-700">Machinery Name</Label>
+              <Label>Machinery Name</Label>
               <Input placeholder="e.g. Excavator 30 Ton With Breaker" />
             </div>
 
             <div className="md:col-span-2">
-              <Label className="text-base font-semibold text-gray-700">Location</Label>
+              <Label>Location</Label>
               <Input placeholder="Enter worksite location" />
             </div>
 
             <div>
-              <Label className="text-base font-semibold text-gray-700">Start Date</Label>
+              <Label>Start Date</Label>
               <Input type="date" />
             </div>
 
             <div>
-              <Label className="text-base font-semibold text-gray-700">Return Date</Label>
+              <Label>Return Date</Label>
               <Input type="date" />
             </div>
 
             <div>
-              <Label className="text-base font-semibold text-gray-700">Total Hours</Label>
+              <Label>Total Hours</Label>
               <Input
                 type="number"
                 value={hours}
@@ -67,7 +67,7 @@ export default function HiringCardForm() {
             </div>
 
             <div>
-              <Label className="text-base font-semibold text-gray-700">Rate per 8 Hours (BHD)</Label>
+              <Label>Rate per 8 Hours (BHD)</Label>
               <Input
                 type="number"
                 value={rate}
@@ -77,12 +77,12 @@ export default function HiringCardForm() {
             </div>
 
             <div className="md:col-span-2">
-              <Label className="text-base font-semibold text-gray-700">Calculated Amount</Label>
+              <Label>Calculated Amount</Label>
               <Input value={`BHD ${total}`} readOnly className="bg-gray-100 text-gray-700 font-medium" />
             </div>
 
             <div className="md:col-span-2">
-              <Label className="text-base font-semibold text-gray-700">Notes</Label>
+              <Label>Notes</Label>
               <Textarea placeholder="Any special instructions or notes..." />
             </div>
 
