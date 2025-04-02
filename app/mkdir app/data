@@ -1,0 +1,38 @@
+[
+  {
+    "cardNumber": "106767",
+    "customerName": "BAHRAIN STEEL BSCC",
+    "machineryName": "FORKLIFT 5 TON",
+    "location": "BAHRAIN STEEL",
+    "status": "Received",
+    "returnDate": "04-Feb-25",
+    "invoice": "AH/25/036",
+    "date": "02-Jan-25",
+    "rate": "BHD 47.67",
+    "hours": 307.5,
+    "sp": "MK",
+    "cashMemo": "",
+    "taxInvoice": "AH/25/036",
+    "hiringCardAmount": 1832.3,
+    "invoicedAmount": 1832.3,
+    "note": "ORDER FROM 2024"
+  },
+  {
+    "cardNumber": "106885",
+    "customerName": "TAHA INTERNATIONAL",
+    "machineryName": "ROCK BREAKER",
+    "location": "MAAMEER",
+    "status": "Running",
+    "returnDate": "",
+    "invoice": "",
+    "date": "01-Jan-25",
+    "rate": "BHD 99.00",
+    "hours": 201.5,
+    "sp": "MA",
+    "cashMemo": "",
+    "taxInvoice": "",
+    "hiringCardAmount": 2493.563,
+    "invoicedAmount": 2493.563,
+    "note": ""
+  }
+]
